@@ -20,7 +20,43 @@ def main():
     starting to write your own code. You should also delete this
     comment and replace it with a better, more descriptive one.
     """
-    pass
+    # pass
+    if front_is_blocked():
+        put_beeper()
+    else:
+        move()
+        if front_is_blocked():
+            put_beeper()
+        else:
+            move()
+            move()
+            move()
+            if front_is_blocked():
+                move_back()
+                put_beeper()
+            else:
+                move()
+                move()
+                move()
+                if front_is_blocked():
+                    move_back()
+                    move()
+                    move()
+                    put_beeper()
+                else:
+                    move()
+                    if front_is_blocked():
+                        move_back()
+                        move()
+                        move()
+                        put_beeper()
+
+
+def move_back():
+    turn_left()
+    turn_left()
+    move()
+    move()
 
 
 # There is no need to edit code beyond this point

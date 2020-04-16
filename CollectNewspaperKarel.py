@@ -18,7 +18,26 @@ def main():
     starting to write your own code. You should also delete this
     comment and replace it with a better, more descriptive one.
     """
-    pass
+    # pass
+    while front_is_clear():
+        move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+    pick_beeper()
+    turn_left()
+    turn_left()
+    while front_is_clear():
+        move()
+    turn_right()
+    move()
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 
 # There is no need to edit code beyond this point

@@ -17,10 +17,43 @@ def main():
     starting to write your own code. You should also delete this
     comment and replace it with a better, more descriptive one.
     """
-    pass
+    # pass
+    turn_left()
+    while right_is_clear():
+        fill_the_avenue()
+        if facing_north():
+            turn_right()
+        else:
+            turn_left()
+        if front_is_clear():
+            next_stage()
+        if left_is_blocked():
+            turn_right()
+        else:
+            turn_left()
 
 
-# There is no need to edit code beyond this point
+def fill_the_avenue():
+    while front_is_clear():
+        if no_beepers_present():
+            put_beeper()
+            move()
+        else:
+            move()
+
+
+def next_stage():
+    move()
+    move()
+    move()
+    move()
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
 
 if __name__ == "__main__":
     run_karel_program()

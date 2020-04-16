@@ -18,7 +18,44 @@ def main():
     starting to write your own code. You should also delete this
     comment and replace it with a better, more descriptive one.
     """
-    pass
+    # pass
+    left_move()
+    left_move()
+    right_move()
+    left_move()
+    left_move()
+    right_move()
+    left_move()
+    left_move()
+    left_move()
+    right_move()
+    right_move()
+    right_move()
+
+
+def right_move():
+    fill_line()
+    turn_right()
+    move()
+
+
+def left_move():
+    fill_line()
+    turn_left()
+    move()
+
+
+def fill_line():
+    while left_is_blocked():
+        put_beeper()
+        move()
+    put_beeper()
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 
 # There is no need to edit code beyond this point
